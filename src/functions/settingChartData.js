@@ -10,7 +10,7 @@ export const settingChartData = (
   setChartData({
     labels: prices1.map((data) => convertDate(data[0])),
     datasets: [
-      {
+      { 
         label: coin1?.name ?? "",
         data: prices1.map((data) => data[1]),
         borderWidth: 1,

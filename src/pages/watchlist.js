@@ -16,12 +16,18 @@ function WatchlistPage() {
   }, []);
 
   const getData = async () => {
+    try{
     setLoading(true);
     const allCoins = await get100Coins();
     if (coins) {
       setMyWatchlist(allCoins.filter((item) => coins.includes(item.id)));
     }
     setLoading(false);
+  }
+  catch(error){
+    console.log(error.message)
+    setLoading(false);
+  }
   };
 
   return (
@@ -30,7 +36,7 @@ function WatchlistPage() {
         <Loader />
       ) : (
         <div style={{ minHeight: "90vh" }}>
-          {myWatchlist?.length == 0 || !coins ? (
+          {myWatchlist.length == 0 || !coins ? (
             <div>
               <Header />
               <h1 style={{ textAlign: "center", marginBottom: "2rem" }}>

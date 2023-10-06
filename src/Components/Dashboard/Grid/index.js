@@ -34,8 +34,7 @@ function Grid({ coin, delay, isWatchlistPage }) {
           </div>
 
           <IconButton
-            onClick={(e) => {
-              e.preventDefault();
+            onClick={(e) => { e.preventDefault();
               if (added) {
                 removeFromWatchlist(coin.id);
                 setAdded(false);

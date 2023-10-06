@@ -13,23 +13,29 @@ import { getCoinData } from "../functions/getCoinData";
 import { getCoinPrices } from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
 
+
 function CoinPage() {
   const { id } = useParams();
   const [coin, setCoin] = useState();
   const [loading, setLoading] = useState(false);
-  const [days, setDays] = useState(120);
+  const [days, setDays] = useState(30);
   const [priceType, setPriceType] = useState("prices");
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [],
   });
 
+
   useEffect(() => {
+   if(id){
     getData();
+   }
   }, [id]);
 
-  const getData = async () => {
+
+   async function getData() {
     setLoading(true);
+   try{
     const data = await getCoinData(id);
     if (data) {
       coinObject(setCoin, data); //For Coin Obj being passed in the List
@@ -39,7 +45,13 @@ function CoinPage() {
         setLoading(false);
       }
     }
+   }
+   catch(error){
+    console.log(error.message)
+    setLoading(false);
+   }
   };
+
 
   const handleDaysChange = async (event) => {
     setLoading(true);
@@ -51,15 +63,27 @@ function CoinPage() {
     }
   };
 
-  const handlePriceTypeChange = async (event) => {
+
+  const handlePriceTypeChange = async (event, newType) => {
     setLoading(true);
-    setPriceType(event.target.value);
-    const prices = await getCoinPrices(id, days, event.target.value);
-    if (prices) {
-      settingChartData(setChartData, prices, coin);
+    if(newType==null){
+        const prices = await getCoinPrices(id, days,priceType);
+        if (prices.length > 0) {
+            settingChartData(setChartData, prices);
+            setLoading(false);
+        }
     }
-    setLoading(false);
+    else{
+    setPriceType(newType);
+    // console.log("new", newType);
+    const prices = await getCoinPrices(id, days,newType);
+        if (prices.length > 0) {
+            settingChartData(setChartData, prices);
+            setLoading(false);
+        }
+    }
   };
+
 
   return (
     <div>
@@ -86,5 +110,6 @@ function CoinPage() {
     </div>
   );
 }
+
 
 export default CoinPage;

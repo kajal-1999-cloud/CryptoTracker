@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../constants";
+import { API_URL } from "../constants";  
 
 export const getCoinData = (id) => {
   const coinData = axios

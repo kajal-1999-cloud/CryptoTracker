@@ -8,6 +8,18 @@
   --green: #61c96f;
   --red: #f94141;
 }
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #5f5e5e;
+  --darkgrey: #f3f3f3;
+  --teal: rgb(4, 41, 41);
+  --sky: #89abe0;
+  --tomato : rgb(236, 56, 24);
+  --yellow : rgb(226, 226, 45);
+  --blue:#3a80e9;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -20,6 +32,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
   overflow-x: hidden;
+  color: var(--white);
 }
 
 h1,
@@ -41,10 +54,26 @@ p {
   width: 0.3rem;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+} 
+
 ::-webkit-scrollbar-thumb {
   background: var(--blue);
   border-radius: 10px;
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+a{
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+
 
 img {
   -webkit-user-drag: none;
@@ -90,3 +119,4 @@ a {
     display: none;
   }
 }
+

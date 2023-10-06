@@ -12,7 +12,8 @@ function Footer() {
     document.documentElement.scrollTop = 0;
   }
   return (
-    <div className="footer">
+    <div className="">
+      <div className="footer">
       <h2 className="logo" onClick={() => topFunction()}>
         CryptoTracker<span>.</span>
       </h2>
@@ -33,6 +34,11 @@ function Footer() {
   
           <InstagramIcon className="social-link" />
         </a>
+      </div>
+      </div>
+      <div className='declaration'>
+            <div><p>@ All Rights reserved: CryptoTracker</p></div>
+            <div><p>Designed and Developed by #SDAS</p></div>
       </div>
     </div>
   );

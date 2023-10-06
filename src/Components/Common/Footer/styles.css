@@ -36,7 +36,16 @@
     transform: scale(1.2);
   }
   
-  
+  .declaration{
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 3rem;
+  }
+  .declaration p{
+    color: var(--grey);
+    background-color: var(--black);
+
+  }
   @media only screen and (max-width: 800px) {
     .footer {
       z-index: 1000;

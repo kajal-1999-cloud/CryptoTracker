@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import DarkMode from "../DarkMode";
+
 
 export default function MobileDrawer() {
   const [flag, setFlag] = useState(false);
@@ -31,6 +33,7 @@ export default function MobileDrawer() {
             }}
           >
           </div>
+          <DarkMode/>
         </div>
       </Drawer>
     </div>

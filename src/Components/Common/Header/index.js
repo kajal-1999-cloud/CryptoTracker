@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import Button from "../Button";
 import MobileDrawer from "./drawer";
 import "./styles.css";
+import DarkMode from "../DarkMode";
+
 
 function Header() {
 
@@ -16,6 +18,7 @@ function Header() {
         </h1>
       </a>
       <div className="links-flex">
+        <DarkMode/>
         <a href="/">
           <p className="link">Home</p>
         </a>
