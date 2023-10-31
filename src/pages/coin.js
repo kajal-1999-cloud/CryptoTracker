@@ -75,8 +75,9 @@ function CoinPage() {
     }
     else{
     setPriceType(newType);
-    // console.log("new", newType);
     const prices = await getCoinPrices(id, days,newType);
+    // console.log("new", newType);
+
         if (prices.length > 0) {
             settingChartData(setChartData, prices);
             setLoading(false);

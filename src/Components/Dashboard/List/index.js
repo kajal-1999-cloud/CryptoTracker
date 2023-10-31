@@ -25,7 +25,7 @@ function List({ coin, delay, isWatchlistPage }) {
       >
         <Tooltip placement="bottom-start" title="Image">
           <td className="td-img">
-            <img src={coin.image} className="coin-image" />
+            <img src={coin.image} className="coin-image"alt='' />
           </td>
         </Tooltip>
         <Tooltip placement="bottom-start" title="Info">
@@ -62,15 +62,14 @@ function List({ coin, delay, isWatchlistPage }) {
                 coin.price_change_percentage_24h < 0 && "coin-price-red"
               }`}
             >
-              {coin.current_price.toLocaleString()}₹
+              ₹{coin.current_price.toLocaleString()}
             </p>
             <p
               className={`coin-price coin-price-list mobile-price ${
                 coin.price_change_percentage_24h < 0 && "coin-price-red"
               }`}
             >
-              $
-              {convertNumbers(
+              ${convertNumbers(
                 coin.current_price < 1
                   ? parseFloat(coin.current_price).toFixed(3)
                   : parseInt(coin.current_price)
@@ -88,7 +87,7 @@ function List({ coin, delay, isWatchlistPage }) {
         <Tooltip placement="bottom-start" title="Market Cap">
           <td className="td-mkt-cap">
             <span className="coin-total_volume">
-              {coin.market_cap.toLocaleString()}₹
+            ₹{coin.market_cap.toLocaleString()}
             </span>
           </td>
         </Tooltip>

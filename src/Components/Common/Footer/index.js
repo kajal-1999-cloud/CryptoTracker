@@ -18,7 +18,7 @@ function Footer() {
         CryptoTracker<span>.</span>
       </h2>
       <div className="social-links">
-      <a href="https://github.com/kajal-1999-cloud" target="_blank">
+      <a href="https://github.com/kajal-1999-cloud" target="_blank" >
           <GitHubIcon className="social-link" />
         </a>
         <a href="/" target="_blank">
@@ -30,16 +30,16 @@ function Footer() {
         <a href="/" target="_blank">
           <TwitterIcon className="social-link" />
         </a>
-        <a href="https://www.instagram.com/kajalg1401/" target="_blank">
+        <a href="https://www.instagram.com/kajalg1401/" target="_blank" >
   
           <InstagramIcon className="social-link" />
         </a>
       </div>
       </div>
-      <div className='declaration'>
+      {/* <div className='declaration'>
             <div><p>@ All Rights reserved: CryptoTracker</p></div>
             <div><p>Designed and Developed by #SDAS</p></div>
-      </div>
+      </div> */}
     </div>
   );
 }

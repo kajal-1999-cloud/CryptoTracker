@@ -1,10 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import { toast } from "react-toastify";
+import { useTheme } from "@mui/material/styles";
 
-export default function DarkMode({ selectedTheme }) {
+export default function DarkMode() {
+    const theme = useTheme();
+
+    // setting the background image of the switch button
     const MaterialUISwitch = styled(Switch)(({ theme }) => ({
         width: 62,
         height: 34,
@@ -52,37 +55,45 @@ export default function DarkMode({ selectedTheme }) {
         },
     }));
 
+    // on load of the page apllied theme 
+    useEffect(() => {
+        const selectedTheme = localStorage.getItem("selectedTheme");
+        if (selectedTheme) {
+            document.querySelector("body").setAttribute("data-theme", selectedTheme);
+        } else {
+            // Set a default theme if none is set in localStorage
+            localStorage.setItem("selectedTheme", "light");
+        }
+    }, []);
+
+
+    // setting dark theme to body using setAttribute
     const setDarkMode = () => {
         document.querySelector("body").setAttribute("data-theme", "dark");
         localStorage.setItem("selectedTheme", "dark");
     };
+
+// setting light theme to body using setAttribute
     const setLightMode = () => {
         document.querySelector("body").setAttribute("data-theme", "light");
         localStorage.setItem("selectedTheme", "light");
     };
 
-
-    if (selectedTheme === "dark") {
-        setDarkMode();
-    } else {
-        setLightMode();
-    }
-
-
     const toggleTheme = (e) => {
         if (e.target.checked) setDarkMode();
         else setLightMode();
     };
-    
+
     return (
         <FormControlLabel
             control={
                 <MaterialUISwitch
-                    sx={{ m: 1 }}
-                    defaultChecked={selectedTheme === "dark"}
+                    defaultChecked={localStorage.getItem("selectedTheme") === "dark"}
                     onChange={toggleTheme}
                 />
             }
         />
     );
 }
+
+

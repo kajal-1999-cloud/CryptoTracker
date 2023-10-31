@@ -16,7 +16,8 @@ function LandingPageComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Track Crypto
+          {/* Track Crypto */}
+          Let's Ride to the Crypto Universe
         </motion.h1>
         <motion.h1
           className="heading-2"
@@ -24,7 +25,7 @@ function LandingPageComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Real Time.
+         Empower Your Investments with Real-Time Crypto Tracking App
         </motion.h1>
         <motion.p
           className="para"
@@ -32,8 +33,9 @@ function LandingPageComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Stay Ahead of the Crypto Game with Real-Time Tracking – Explore Our
-          Dynamic Dashboard!
+          {/* Stay Ahead of the Crypto Game with Real-Time Tracking – Explore Our
+          Dynamic Dashboard! */}
+          Welcome to our comprehensive crypto tracking platform designed to elevate your investment experience. Embrace the power of knowledge and make informed decisions in the dynamic world of cryptocurrencies. With real-time data and advanced analytics, our platform equips you with the tools to track your favorite digital assets, monitor market trends, and seize opportunities as they arise. <span color='var(--blue)'>Stay updated with us</span>
         </motion.p>
         <motion.div
           className="btn-flex"
@@ -47,8 +49,8 @@ function LandingPageComponent() {
           <RWebShare
             data={{
               text: "Blast Off into the World of Cryptos!",
-              url: "https://toshfolio.netlify.app/",
-              title: "ToshFolio.",
+              url: "https://crypto-tracker-five-sigma.vercel.app/",
+              title: "CryptoTracker.",
             }}
             onClick={() => console.log("shared successfully!")}
           >

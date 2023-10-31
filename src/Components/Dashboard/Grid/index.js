@@ -26,7 +26,7 @@ function Grid({ coin, delay, isWatchlistPage }) {
       >
         <div className="info-flex">
           <div className="coin-info-flex">
-            <img src={coin.image} className="coin-image" />
+            <img src={coin.image} className="coin-image" alt='' />
             <div className="coin-name-flex">
               <h3 className="coin-symbol">{coin.symbol}</h3>
               <p className="coin-name">{coin.name}</p>
@@ -55,7 +55,7 @@ function Grid({ coin, delay, isWatchlistPage }) {
               <StarBorderRoundedIcon
                 className={`watchlist-icon ${
                   coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
-                } `}
+                 } `}
                 sx={{ fontSize: "2rem !important" }}
               />
             )}
@@ -77,17 +77,18 @@ function Grid({ coin, delay, isWatchlistPage }) {
             <TrendingDownRoundedIcon className="trending-icon red" />
           </div>
         )}
+        
         <p
           className={`coin-price ${
             coin.price_change_percentage_24h < 0 && "coin-price-red"
           }`}
         >
-          {coin.current_price.toLocaleString()}₹
+          ₹{coin.current_price.toLocaleString()}
         </p>
         <p className="coin-name-2">
           Total Volume:
           <span className="coin-total_volume">
-            {" "}
+            {/* {" "} */}
             {coin.total_volume.toLocaleString()}
           </span>
         </p>
@@ -95,7 +96,7 @@ function Grid({ coin, delay, isWatchlistPage }) {
           Market Cap:
           <span className="coin-total_volume">
             {" "}
-            {coin.market_cap.toLocaleString()}₹
+            ₹{coin.market_cap.toLocaleString()}
           </span>
         </p>
       </motion.div>

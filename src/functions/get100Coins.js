@@ -8,6 +8,7 @@ export const get100Coins = () => {
     )
     .then((response) => {
       if (response.status == 200) {
+        console.log("response-->" + response)
         return response.data;
       }
     })

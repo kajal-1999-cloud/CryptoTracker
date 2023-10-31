@@ -44,6 +44,7 @@ function DashboardPage() {
     const data = await get100Coins();
     if (data) {
       setCoins(data);
+      console.log(data)
       setPaginatedCoins(data.slice(0, 10));
       setLoading(false);
     }

@@ -5,6 +5,7 @@ export const getCoinData = (id) => {
   const coinData = axios
     .get(`${API_URL}/${id}`)
     .then((response) => {
+      console.log("response-->" + response)
       return response.data;
     })
     .catch((error) => {

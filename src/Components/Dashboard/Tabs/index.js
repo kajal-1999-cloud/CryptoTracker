@@ -12,6 +12,7 @@ import Button from "../../Common/Button";
 function TabsComponent({ coins, isWatchlistPage, setSearch }) {
   const [tabValue, setTabValue] = useState("grid");
 
+  console.log(coins)
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
