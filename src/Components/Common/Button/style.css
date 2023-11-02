@@ -1,7 +1,8 @@
 .btn-div {
     padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
+    font-size: .95rem;
     background-color: var(--blue);
+    background: linear-gradient(to right, #88c4ec, #4ea1ee, #3e69dd);
     /* border: 2px solid var(--darkgrey); */
     border-radius: 3rem;
     cursor: pointer;
@@ -12,10 +13,12 @@
   }
   
   .btn-div:hover {
-    box-shadow: 4px 4px 10px rgba(58, 128, 233, 0.5);
+    box-shadow: 4px 4px 8px rgba(108, 98, 238, 0.993);
+  
   }
   
   .btn-outlined {
+
     width: fit-content;
     padding: 0.5rem 1.5rem;
     font-size: 0.9rem;
@@ -25,9 +28,13 @@
     font-weight: 600;
     background-color: var(--black);
     color: var(--white);
+    box-shadow: 4px 4px 8px rgba(172, 167, 245, 0.993);
+
   }
   
   .btn-outlined:hover {
     background-color: var(--blue);
+    background: linear-gradient(to right, #88c4ec, #4ea1ee, #3e69dd);
+
     transition: all 0.3s;
   }

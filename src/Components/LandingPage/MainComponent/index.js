@@ -8,7 +8,9 @@ import { RWebShare } from "react-web-share";
 
 function LandingPageComponent() {
   return (
-    <div className="landing-wrapper">
+   <div>
+     <div className="landing-wrapper">
+
       <div className="landing-left">
         <motion.h1
           className="heading-1"
@@ -19,14 +21,17 @@ function LandingPageComponent() {
           {/* Track Crypto */}
           Let's Ride to the Crypto Universe
         </motion.h1>
-        <motion.h1
+        {/* <div>
+      <motion.h1
           className="heading-2"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 1.5, delay: 1 }}
         >
-         Empower Your Investments with Real-Time Crypto Tracking App
+         Empower Your Investments: Real-Time Crypto Tracking 
         </motion.h1>
+      </div> */}
+       
         <motion.p
           className="para"
           initial={{ opacity: 0, x: 50 }}
@@ -37,6 +42,17 @@ function LandingPageComponent() {
           Dynamic Dashboard! */}
           Welcome to our comprehensive crypto tracking platform designed to elevate your investment experience. Embrace the power of knowledge and make informed decisions in the dynamic world of cryptocurrencies. With real-time data and advanced analytics, our platform equips you with the tools to track your favorite digital assets, monitor market trends, and seize opportunities as they arise. <span color='var(--blue)'>Stay updated with us</span>
         </motion.p>
+        
+        <div>
+      <motion.h1
+          className="heading-2"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 1 }}
+        >
+         Empower Your Investments: Real-Time Crypto Tracking 
+        </motion.h1>
+      </div>
         <motion.div
           className="btn-flex"
           initial={{ opacity: 0, x: 50 }}
@@ -46,6 +62,7 @@ function LandingPageComponent() {
           <a href="/dashboard">
             <Button text="Dashboard" />
           </a>
+
           <RWebShare
             data={{
               text: "Blast Off into the World of Cryptos!",
@@ -57,6 +74,7 @@ function LandingPageComponent() {
             <Button text="Share App" outlined={true} />
           </RWebShare>
         </motion.div>
+      
       </div>
       <div className="landing-right">
         <img src={gradient} className="gradient" />
@@ -73,6 +91,9 @@ function LandingPageComponent() {
           }}
         />
       </div>
+     
+    </div>
+   
     </div>
   );
 }

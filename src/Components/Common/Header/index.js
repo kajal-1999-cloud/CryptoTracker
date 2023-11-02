@@ -12,13 +12,17 @@ function Header() {
 
   return (
     <div className="header">
-      <a href="/">
-        <h1 style={{ fontSize: "2rem" }}>
-          CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
-        </h1>
+      
+     <div className='logo'>
+          <img src="https://i.ibb.co/x6FTCCy/logo.png" alt="CryptoTracker Logo" />
+          <a href="/">
+          <p >
+            CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+          </p>
       </a>
+     </div>
       <div className="links-flex">
-        <DarkMode/>
+     <DarkMode/>
         <a href="/">
           <p className="link">Home</p>
         </a>
@@ -28,7 +32,10 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
-        <a href="/dashboard">
+       
+      {/* </div>
+      <div className='last-flex'> */}
+      <a href="/dashboard">
           <Button
             text="Dashboard"
             onClick={() => {
