@@ -40,7 +40,7 @@ function LandingPageComponent() {
         >
           {/* Stay Ahead of the Crypto Game with Real-Time Tracking – Explore Our
           Dynamic Dashboard! */}
-          Welcome to our comprehensive crypto tracking platform designed to elevate your investment experience. Embrace the power of knowledge and make informed decisions in the dynamic world of cryptocurrencies. With real-time data and advanced analytics, our platform equips you with the tools to track your favorite digital assets, monitor market trends, and seize opportunities as they arise. <span color='var(--blue)'>Stay updated with us</span>
+          Welcome to our comprehensive Crypto Currency Tracking Platform designed to elevate your investment experience. Embrace the power of knowledge and make informed decisions in the dynamic world of cryptocurrencies. With real-time data and advanced analytics, our platform equips you with the tools to track your favorite digital assets, monitor market trends, and seize opportunities as they arise. <span color='var(--blue)'>Stay updated with us</span>
         </motion.p>
         
         <div>
@@ -50,7 +50,7 @@ function LandingPageComponent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1 }}
         >
-         Empower Your Investments: Real-Time Crypto Tracking 
+         Empower Your Investments: Real-Time Crypto Analysis 
         </motion.h1>
       </div>
         <motion.div

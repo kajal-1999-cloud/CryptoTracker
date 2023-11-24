@@ -15,7 +15,7 @@ function Footer() {
     <div className="">
       <div className="footer">
       <h2 className="logo" onClick={() => topFunction()}>
-        CryptoTracker<span>.</span>
+        CryptoAstic<span>.</span>
       </h2>
       <div className="social-links">
       <a href="https://github.com/kajal-1999-cloud" target="_blank" >

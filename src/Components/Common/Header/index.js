@@ -17,7 +17,7 @@ function Header() {
           <img src="https://i.ibb.co/x6FTCCy/logo.png" alt="CryptoTracker Logo" />
           <a href="/">
           <p >
-            CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+            Cryptoastic<span style={{ color: "var(--blue)" }}>.</span>
           </p>
       </a>
      </div>
